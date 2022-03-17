@@ -36,8 +36,6 @@ let getUserName = (sender_psid) => {
             console.log(body);
             if (!err) {
                 body = JSON.parse(body);
-                // "first_name":"peter",
-                // "last_name":"Chang",
                 let username = `${body.last_name} ${body.first_name}`
                 resolve(username);
             } else {
